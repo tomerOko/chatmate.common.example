@@ -8,7 +8,7 @@ var HashMap = /** @class */ (function () {
     }
     HashMap.prototype.add = function (key, value) {
         var _a = this.findIndex(key), hashedKey = _a.hashedKey, index = _a.index;
-        if (index) {
+        if (index != null) {
             var result = this.storage[hashedKey][index].value;
             this.storage[hashedKey][index].value = value;
             return result;
@@ -20,7 +20,7 @@ var HashMap = /** @class */ (function () {
     };
     HashMap.prototype.contains = function (key) {
         var _a = this.findIndex(key), hashedKey = _a.hashedKey, index = _a.index;
-        return index ? true : false;
+        return index !== null ? true : false;
     };
     HashMap.prototype.get = function (key) {
         var _a = this.findIndex(key), hashedKey = _a.hashedKey, index = _a.index;
@@ -28,7 +28,7 @@ var HashMap = /** @class */ (function () {
     };
     HashMap.prototype.remove = function (key) {
         var _a = this.findIndex(key), hashedKey = _a.hashedKey, index = _a.index;
-        if (index) {
+        if (index !== null) {
             var removed = this.storage[hashedKey].splice(index, 1);
             return removed[0].value;
         }
@@ -38,7 +38,7 @@ var HashMap = /** @class */ (function () {
         var hashedKey = this.hashFunction.hash(key);
         var bucket = this.storage[hashedKey];
         var index = bucket ? bucket.findIndex(function (obj) { return obj.key == key; }) : null;
-        return { hashedKey: hashedKey, index: (index && index > -1) ? index : null };
+        return { hashedKey: hashedKey, index: (index !== null && index > -1) ? index : null };
     };
     return HashMap;
 }());

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var hashFunction_StringUnicodes = {
+var hashFromStringUnicodes = {
     range: Math.pow(2, 16),
     hash: function (key) {
         var hash = 0;
@@ -14,5 +14,5 @@ var hashFunction_StringUnicodes = {
         return hash;
     }
 };
-exports.default = hashFunction_StringUnicodes;
+exports.default = hashFromStringUnicodes;
 //# sourceMappingURL=hashFromStringUnicodes.js.map
