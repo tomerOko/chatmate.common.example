@@ -34,3 +34,4 @@ jest   = build all .test.ts and imported files to memory + and run jest binaries
 
 https://github.com/tomerOko/k8s_node_template.service_template.git
 git submodule add -b master --name single_service_template  https://github.com/tomerOko/k8s_node_template.service_template.git ./services/service_template
+c
