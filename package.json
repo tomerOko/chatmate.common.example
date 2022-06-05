@@ -2,7 +2,12 @@
   "name": "@chatmate/common.example",
   "version": "1.0.2",
   "description": "a nodejs typescript dev environment for packages development",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "jest"
   },

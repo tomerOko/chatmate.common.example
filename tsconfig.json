@@ -3,13 +3,16 @@
       "rootDir": "src",
       "target": "es5",
       "module": "commonjs",
-      "outDir": "out",
-      "sourceMap": true
+      "outDir": "lib",
+      "sourceMap": true,
+      "declaration": true,  // to publish as a package
+      "declarationMap": true, // to publish as a package
     },
     "include": [
       "src/**/*"
     ],
     "exclude": [
-      "src/**/*.spec.ts"
+      "src/**/*.spec.ts",
+      "node_modules"
     ]
 }
